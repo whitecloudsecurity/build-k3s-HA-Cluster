@@ -1,0 +1,15 @@
+# Installing
+
+Once you have followed the setup-for-ansible.txt instructions
+you can run the create and teardown scripts for the cluster.
+
+# Run this script when your VMs are up and running at the
+#  IP addresses specified in the invenstory/my-cluster/hosts file
+
+  bin/create_k3s.sh
+
+# run this script when you want to tear down the k3s cluster
+#  This will uninstall k3s and reboot the VMs
+
+  bin/teardown_k3s.sh
+

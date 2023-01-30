@@ -1,0 +1,36 @@
+# In order to properly run ansible, there are several module
+#  issues that need to be dealt with.
+
+
+# Install ansible using pip3
+python3 -m pip install ansible
+# or
+pip3 install ansible
+
+  # for CentOS 7
+  # Install latest version of python3
+  sudo yum -y install python36
+  # Install the Python Netaddr module
+  sudo yum -y install python36-netaddr
+  sudo yum -y install python36-cryptography
+
+  /usr/bin/python3 -m pip install --user --upgrade pip
+  /usr/bin/python3 -m pip -V
+
+  /usr/bin/python3 -m pip install --user --upgrade wheel
+
+  /usr/bin/python3 -m pip install --user ansible
+
+
+  # /usr/bin/python3 -m pip uninstall -y ansible
+  # /usr/bin/python3 -m pip uninstall -y wheel
+
+
+ansible --version | grep "python version"
+
+# Use Galaxy to insure the proper modules are available
+ansible-galaxy install -r ./collections/requirements.yml
+ansible-galaxy collection install community.general
+ansible-galaxy collection install ansible.utils
+
+
